@@ -22,8 +22,10 @@ com\INGRES\INGRES\Model\InputMsgResponse.class
 com\INGRES\INGRES\Model\GroundWaterData.class
 com\INGRES\INGRES\DTOs\OutputRequestTemp$OutputRequestTempBuilder.class
 com\INGRES\INGRES\Config\BurhanConfig.class
+com\INGRES\INGRES\Config\SecurityConfig.class
 com\INGRES\INGRES\DTOs\OutputResponseTemp.class
 com\INGRES\INGRES\DTOs\OutputRequestTemp$RawData.class
 com\INGRES\INGRES\Repository\INGRES__DB.class
+com\INGRES\INGRES\Config\WebConfig.class
 com\INGRES\INGRES\DTOs\Entities.class
 com\INGRES\INGRES\DTOs\OutputResponseTemp$OutputResponseTempBuilder.class
