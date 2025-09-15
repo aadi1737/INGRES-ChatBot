@@ -46,6 +46,7 @@ public class RAGService {
         System.out.println(inputResponse);
 
         OutputRequestTemp dbResponse = getDBResponse(inputResponse);
+        dbResponse.setQuery(msg);
         OutputResponseTemp responseTemp = finalResponse(dbResponse);
         return responseTemp;
     }
