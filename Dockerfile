@@ -6,7 +6,7 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Copy the built JAR file into the container
-COPY target/your-application-name.jar /app/app.jar
+COPY target/INGRES-0.0.1-SNAPSHOT.jar /app/app.jar
 
 # Expose the port your application will run on
 EXPOSE 8080
