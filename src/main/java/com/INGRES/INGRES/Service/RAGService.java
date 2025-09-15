@@ -43,6 +43,7 @@ public class RAGService {
         InputResponseTemp inputResponse = restTemplate.postForObject(
                 INPUT_API_URL,request,InputResponseTemp.class);
 
+        System.out.println(inputResponse);
 
         OutputRequestTemp dbResponse = getDBResponse(inputResponse);
         OutputResponseTemp responseTemp = finalResponse(dbResponse);
@@ -95,7 +96,7 @@ public class RAGService {
         System.out.println(dbRes);
 
 
-        DatabaseResForInput fakeResponse = new DatabaseResForInput();
+//        DatabaseResForInput fakeResponse = new DatabaseResForInput();
         return  dbRes;
     }
 }
