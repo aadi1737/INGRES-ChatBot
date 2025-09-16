@@ -1,5 +1,6 @@
 package com.INGRES.INGRES.Controller;
 
+import com.INGRES.INGRES.DTOs.HuggingFaceRequestDTO;
 import com.INGRES.INGRES.Model.FinalResponse;
 import com.INGRES.INGRES.Service.FrontendService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,11 @@ public class FrontendController {
         return "INGRES Chatbot API is running! Use /getInputBody (POST) or /getInput/{message} (GET)";
     }
 
-    @PostMapping("/getInputBody")
-    public String getUserInputBody(@RequestBody String inputMsg){
+    @PostMapping("/inputBody")
+    public String getUserInputBody(@RequestBody HuggingFaceRequestDTO dto){
 //        FinalResponse userOutput = frontendService.getUserInput(inputMsg);
-        String finalOutput = frontendService.getUserInput(inputMsg);
+
+        String finalOutput = frontendService.getUserInput(dto.getInputs());
         return finalOutput;
     }
 
