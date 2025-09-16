@@ -46,6 +46,8 @@ public class RAGService {
             InputResponseTemp inputResponse = restTemplate.postForObject(
                     INPUT_API_URL, request, InputResponseTemp.class);
 
+//        String intentJi = inputResponse.getIntent();
+//        System.out.println("\nBurhan FIrst API intent-"+intentJi);
             logger.info("Intent API response: {}", inputResponse);
 
             // Get database response based on intent
@@ -54,7 +56,7 @@ public class RAGService {
         System.out.println("/nQuery After DBres-"+dbResponse.getQuery());
 //            logger.info("Database response: {}", dbResponse);
 
-        dbResponse.setIntent("Greeting");
+//        dbResponse.setIntent(intentJi);
             // Generate fina    l response
             return finalResponse(dbResponse);
 //
