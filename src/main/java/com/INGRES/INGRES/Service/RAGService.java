@@ -20,8 +20,8 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 @Service
 public class RAGService {
 
-    private final String INPUT_API_URL= "https://ingres.onrender.com/chatbot/intent";
-    private final String OUTPUT_API_URL="https://ingres.onrender.com/chatbot/generate-response";
+    private final String INPUT_API_URL= "https://burhan1863-ingres.hf.space/chatbot/intent";
+    private final String OUTPUT_API_URL="https://burhan1863-ingres.hf.space/generate-response";
 
     @Autowired
     private RestTemplate restTemplate;
