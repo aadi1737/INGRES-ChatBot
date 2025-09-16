@@ -14,7 +14,7 @@ public class FrontendController {
     private FrontendService frontendService;
 
 
-    @PostMapping("/getInput/{inputMsg}")
+    @PostMapping("/getInputBody")
     public String getUserInputBody(@RequestBody String inputMsg){
 //        FinalResponse userOutput = frontendService.getUserInput(inputMsg);
         String finalOutput = frontendService.getUserInput(inputMsg);
