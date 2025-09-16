@@ -23,6 +23,7 @@ public class RAGService {
     private final String INPUT_API_URL= "https://burhan1863-ingres.hf.space/chatbot/intent";
     private final String OUTPUT_API_URL="https://burhan1863-ingres.hf.space/generate-response";
 
+    private final String API_KEY = "https://ingres-chatbot-7hzs.onrender.com/getInput";
     @Autowired
     private RestTemplate restTemplate;
 
@@ -38,6 +39,8 @@ public class RAGService {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(APPLICATION_JSON);
 
+        //Deepseek
+        headers.set("Authorization", "Bearer " + API_KEY);
         HttpEntity<InputRequestTemp> request = new HttpEntity<>(body,headers);
 
         InputResponseTemp inputResponse = restTemplate.postForObject(
