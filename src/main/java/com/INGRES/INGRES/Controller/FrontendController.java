@@ -13,6 +13,10 @@ public class FrontendController {
     @Autowired
     private FrontendService frontendService;
 
+    @GetMapping("/")
+    public String home() {
+        return "INGRES Chatbot API is running! Use /getInputBody (POST) or /getInput/{message} (GET)";
+    }
 
     @PostMapping("/getInputBody")
     public String getUserInputBody(@RequestBody String inputMsg){
