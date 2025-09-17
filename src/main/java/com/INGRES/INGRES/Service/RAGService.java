@@ -15,6 +15,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 @Service
 public class RAGService {
 
+    final int count=0;
     private static final Logger logger = LoggerFactory.getLogger(RAGService.class);
 
     // External API URLs (currently disabled)
@@ -84,7 +85,7 @@ public class RAGService {
 
     public OutputRequestTemp getDBResponse(InputResponseTemp input) {
             // Get data from MongoDB - using a fixed ID for now
-            OutputRequestTemp dbRes = mongoDb.findById("68c64204db5c5418a86de90a");
+            OutputRequestTemp dbRes = mongoDb.findById("68cac3a77d5b14b34d77afef");
             return dbRes;
 
 //        catch (Exception e) {
