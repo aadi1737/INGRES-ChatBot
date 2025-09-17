@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class InputResponseTemp {
     private String intent;
     private Entities entities;
-    private double confidence;
+    private float confidence;
 }

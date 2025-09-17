@@ -47,14 +47,14 @@ public class RAGService {
             InputResponseTemp inputResponse = restTemplate.postForObject(
                     INPUT_API_URL, request, InputResponseTemp.class);
 
-//        String intentJi = inputResponse.getIntent();
-//        System.out.println("\nBurhan FIrst API intent-"+intentJi);
-            logger.info("Intent API response: {}", inputResponse);
+        String intentJi = inputResponse.getIntent();
+        System.out.println("\nBurhan FIrst API intent-"+intentJi);
+        System.out.println("Intent API response:"+inputResponse);
 
             // Get database response based on intent
             OutputRequestTemp dbResponse = getDBResponse(inputResponse);
             dbResponse.setQuery(msg);
-        System.out.println("/nQuery After DBres-"+dbResponse.getQuery());
+        System.out.println("\nQuery After DBres-"+dbResponse.getQuery());
 //            logger.info("Database response: {}", dbResponse);
 
 //        dbResponse.setIntent(intentJi);
@@ -78,7 +78,7 @@ public class RAGService {
                     OUTPUT_API_URL, request, OutputResponseTemp.class);
 
 //            logger.info("Final response from external API: {}", finalResponse);
-        System.out.println("/n/nBurhan Response-"+finalResponse.getNl_response());
+        System.out.println("\nBurhan Response-"+finalResponse.getNl_response());
             return finalResponse;
 
     }
